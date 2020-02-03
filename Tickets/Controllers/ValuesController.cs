@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Tickets.Controllers
+namespace TicketApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

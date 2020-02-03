@@ -35,7 +35,7 @@ namespace Tickets
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "ToDo API",
+                    Title = "Tickets API",
                     Description = "My API with ToDos and Projects",
                     TermsOfService = new Uri("https://www.bcit.ca/study/programs/699ccertt"),
                     Contact = new OpenApiContact
