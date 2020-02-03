@@ -8,5 +8,8 @@
 
 ### Sample screenshots:
 
+<image src="image1.JPG"><br /><br />
+<image src="image2.JPG">
+
 
 
