@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Tickets.Services;
+using TicketApp.Models;
 
 namespace TicketApp.Controllers
 {
@@ -15,9 +15,9 @@ namespace TicketApp.Controllers
    
         public class VenuesController : ControllerBase
         {
-            private readonly TicketsDbContext _context;
+            private readonly TicketingContext _context;
 
-            public VenuesController(TicketsDbContext context)
+            public VenuesController(TicketingContext context)
             {
                 _context = context;
             }

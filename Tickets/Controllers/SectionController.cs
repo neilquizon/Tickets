@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Tickets.Services;
+using TicketApp.Models;
 
 namespace TicketApp.Controllers
 {
@@ -15,15 +15,15 @@ namespace TicketApp.Controllers
    
         public class SectionsController : ControllerBase
         {
-            private readonly TicketsDbContext _context;
+        private readonly TicketingContext _context;
 
-            public SectionsController(TicketsDbContext context)
-            {
-                _context = context;
-            }
+        public SectionsController(TicketingContext context)
+        {
+            _context = context;
+        }
 
-            // GET: api/Sections
-            [HttpGet]
+        // GET: api/Sections
+        [HttpGet]
             public async Task<ActionResult<IEnumerable<Section>>> GetSection()
             {
                 return await _context.Section.ToListAsync();

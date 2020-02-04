@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Tickets.Services;
+
+using TicketApp.Models;
 
 namespace TicketApp.Controllers
 {
@@ -15,15 +16,15 @@ namespace TicketApp.Controllers
    
         public class TicketPurchaseSeatsController : ControllerBase
         {
-            private readonly TicketsDbContext _context;
+        private readonly TicketingContext _context;
 
-            public TicketPurchaseSeatsController(TicketsDbContext context)
-            {
-                _context = context;
-            }
+        public TicketPurchaseSeatsController(TicketingContext context)
+        {
+            _context = context;
+        }
 
-            // GET: api/TicketPurchaseSeats
-            [HttpGet]
+        // GET: api/TicketPurchaseSeats
+        [HttpGet]
             public async Task<ActionResult<IEnumerable<TicketPurchaseSeat>>> GetTicketPurchaseSeat()
             {
                 return await _context.TicketPurchaseSeat.ToListAsync();

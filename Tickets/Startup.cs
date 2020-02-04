@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
-using Tickets.Services;
+using TicketApp.Models;
 
 namespace Tickets
 {
@@ -29,7 +29,7 @@ namespace Tickets
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<TicketsDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<TicketingContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddSwaggerGen(c => {
                 c.SwaggerDoc("v1", new OpenApiInfo
